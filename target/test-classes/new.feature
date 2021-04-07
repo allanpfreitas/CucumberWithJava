@@ -11,3 +11,14 @@
       Given I entered string "Coin"
       When I test it for palindrome
       Then the result should be "False"
+
+    Scenario Outline: Check if String is Palindrome
+      Given I entered word <wordtotest>
+      When I test it for palindrome
+      Then The output should be <output>
+      Examples:
+        | wordtotest | output |
+        | "Refer"    | "true" |
+        | "Coin"     | "false"|
+        | "Space"    | "false"|
+        | "racecar"  | "true" |

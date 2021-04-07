@@ -30,4 +30,14 @@ public class StepDefinitions {
         }
 
     }
+
+    @Given("I entered word {string}")
+    public void i_entered_word(String word) {
+        testPalindrome = word;
+    }
+    @Then("The output should be {string}")
+    public void the_output_should_be(String expectedresult) {
+        theResultShouldBe(expectedresult);
+
+    }
 }
